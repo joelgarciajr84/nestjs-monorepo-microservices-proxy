@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  cockpit:
+    container_name: cockpit
+    build:
+      context: ./cockpit
+    volumes:
+      - ./cockpit:/etc/nginx/
+    ports:
+      - 8080:8080
+    networks:
+      - monorepo_network
+  auth_api:
+    container_name: auth_api
+    build:
+      context: ./auth
+    volumes:
+      - ./auth/:/usr/src/app/
+    networks:
+      - monorepo_network
+    ports:
+      - 3000:3000
+      - 9229:9229
+    command: npm run start:debug
+  marvel_api:
+    container_name: marvel_api
+    build:
+      context: ./marvel
+    volumes:
+      - ./marvel/:/usr/src/app/
+    networks:
+      - monorepo_network
+    ports:
+      - 3001:3000
+      - 9230:9229
+    command: npm run start:debug
+  dc_api:
+    container_name: dc_api
+    build:
+      context: ./dc
+    volumes:
+      - ./dc/:/usr/src/app/
+    networks:
+      - monorepo_network
+    ports:
+      - 3002:3000
+      - 9231:9229
+    command: npm run start:debug
+networks:
+  monorepo_network:
+    driver: bridge
