@@ -32,20 +32,8 @@ services:
     networks:
       - monorepo_network
     ports:
-      - 3001:3000
+      - 3001:3001
       - 9230:9229
-    command: npm run start:debug
-  dc_api:
-    container_name: dc_api
-    build:
-      context: ./dc
-    volumes:
-      - ./dc/:/usr/src/app/
-    networks:
-      - monorepo_network
-    ports:
-      - 3002:3000
-      - 9231:9229
     command: npm run start:debug
 networks:
   monorepo_network:
