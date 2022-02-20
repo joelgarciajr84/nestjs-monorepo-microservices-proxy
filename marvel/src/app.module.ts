@@ -3,7 +3,6 @@ import { HttpModule, } from "@nestjs/axios"
 import { ConfigModule } from '@nestjs/config';
 import { MarvelModule } from "./marvel.module";
 
-
 @Module({
   imports: [
     HttpModule,
