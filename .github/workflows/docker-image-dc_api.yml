@@ -1,10 +1,10 @@
-name: Building Auth API
+name: Building DC
 
 on:
   push:
     branches: [ main ]
     paths:
-      - 'src/packages/auth/**'
+      - 'src/packages/dc/**'
   pull_request:
     branches: [ main ]
 
@@ -17,4 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile.AuthAPI  --tag monorepo_auth:$(date +%s)
+      run: docker build . --file Dockerfile.DC  --tag monorepo_dc:$(date +%s)
