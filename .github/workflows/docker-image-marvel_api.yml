@@ -3,19 +3,18 @@ name: Building Marvel
 on:
   push:
     branches: [ main ]
-    # paths:
-    #   - 'marvel/**'
+    paths:
+      - 'marvel/**'
   pull_request:
     branches: [ main ]
 
 jobs:
 
   build:
-    
+
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-    - run: docker build --file ./marvel/Dockerfile --tag monorepo_marvel:$(date +%s)
-
+      run: docker build . --file ./marvel/Dockerfile  --tag monorepo-marvel:$(date +%s)
