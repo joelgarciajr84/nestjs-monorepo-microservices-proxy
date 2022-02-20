@@ -1,12 +1,10 @@
-name: Docker Image CI
+name: Building Marvel
 
 on:
   push:
     branches: [ main ]
     paths:
       - 'marvel/**'
-      - 'auth/**'
-      - 'cockpit/**'
   pull_request:
     branches: [ main ]
 
@@ -19,4 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file ./marvel/Dockerfile  --tag monorepo-marvel:$(date +%s)
