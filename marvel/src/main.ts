@@ -16,6 +16,7 @@ async function bootstrap() {
     .setDescription('Simple Marvel Heroes API with Nest JS')
     .setVersion('1.0')
     .addTag('v1.0')
+    .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);  
