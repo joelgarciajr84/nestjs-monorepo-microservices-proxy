@@ -3,8 +3,8 @@ name: Building Marvel
 on:
   push:
     branches: [ main ]
-    # paths:
-    #   - 'marvel/**'
+    paths:
+      - 'marvel/**'
   pull_request:
     branches: [ main ]
 
