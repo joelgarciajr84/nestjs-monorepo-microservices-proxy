@@ -4,9 +4,9 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'marvel'
-      - 'auth'
-      - 'cockpit'
+      - 'marvel/**'
+      - 'auth/**'
+      - 'cockpit/**'
   pull_request:
     branches: [ main ]
 

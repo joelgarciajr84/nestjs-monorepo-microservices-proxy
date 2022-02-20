@@ -2,7 +2,6 @@ import { Body, Controller, Get, Param, Post, ValidationPipe } from '@nestjs/comm
 import { AuthService } from './auth.service';
 import { AuthCrendentialsDto } from './dto/auth-credentials.dto';
 import { AccessToken } from './jwt-payload.interface';
-
 @Controller('auth')
 export class AuthController {
 
