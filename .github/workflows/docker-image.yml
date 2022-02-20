@@ -3,6 +3,10 @@ name: Docker Image CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'marvel'
+      - 'auth'
+      - 'cockpit'
   pull_request:
     branches: [ main ]
 
