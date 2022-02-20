@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 ENV NODE_ENV=local
 
-COPY /marvel/package*.json ./
+COPY /src/packages/marvel/package*.json ./
 
 RUN npm install
 

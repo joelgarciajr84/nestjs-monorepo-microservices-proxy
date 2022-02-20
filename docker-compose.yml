@@ -4,9 +4,9 @@ services:
   cockpit:
     container_name: cockpit
     build:
-      context: ./cockpit
+      context: ./src/packages/cockpit
     volumes:
-      - ./cockpit:/etc/nginx/
+      - ./src/packages/cockpit:/etc/nginx/
     ports:
       - 8080:8080
     networks:
@@ -14,7 +14,8 @@ services:
   auth_api:
     container_name: auth_api
     build:
-      context: ./auth
+      context: ./
+      dockerfile: ./Dockerfile.AuthAPI
     volumes:
       - ./auth/:/usr/src/app/
     networks:
@@ -26,7 +27,8 @@ services:
   marvel_api:
     container_name: marvel_api
     build:
-      context: ./marvel
+      context: ./
+      dockerfile: ./Dockerfile.Marvel
     volumes:
       - ./marvel/:/usr/src/app/
     networks:

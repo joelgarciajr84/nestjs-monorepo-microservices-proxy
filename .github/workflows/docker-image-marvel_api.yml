@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'marvel/**'
+      - 'src/packages/marvel/**'
   pull_request:
     branches: [ main ]
 
