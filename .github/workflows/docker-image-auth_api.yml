@@ -1,10 +1,10 @@
-name: Building Marvel
+name: Building Auth API
 
 on:
   push:
     branches: [ main ]
     paths:
-      - 'marvel/**'
+      - 'auth/**'
   pull_request:
     branches: [ main ]
 
@@ -17,4 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile.Marvel  --tag monorepo_marvel:$(date +%s)
+      run: docker build . --file Dockerfile.AuthAPI  --tag monorepo_marvel:$(date +%s)

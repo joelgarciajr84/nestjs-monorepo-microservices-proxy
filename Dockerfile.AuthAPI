@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 ENV NODE_ENV=local
 
-COPY package*.json ./
+COPY /auth/package*.json ./
 
 RUN npm install
 
