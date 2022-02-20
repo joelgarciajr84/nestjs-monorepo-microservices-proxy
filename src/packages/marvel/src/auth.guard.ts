@@ -1,7 +1,8 @@
 import { Injectable, CanActivate, ExecutionContext, HttpStatus, Logger, HttpException } from '@nestjs/common';
 import { lastValueFrom } from 'rxjs';
 import { HttpService } from '@nestjs/axios'
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 @Injectable()
 export class AuthGuard implements CanActivate {
@@ -25,7 +26,7 @@ export class AuthGuard implements CanActivate {
     private async validateToken(token: string): Promise<boolean> {
 
         try {
-            const endpoint = `${process.env.TOKEN_VERIFY_SVC}/${token}`
+            const endpoint = `${process.env.TOKEN_VERIFY_SVC}/verify/${token}`
             const getTokenValidationRequest = this.httpService.get(endpoint)
 
             const result = await lastValueFrom(getTokenValidationRequest);

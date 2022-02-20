@@ -4,7 +4,7 @@ services:
   cockpit:
     container_name: cockpit
     build:
-      context: ./src/packages/cockpit
+      context: ./
     volumes:
       - ./src/packages/cockpit:/etc/nginx/
     ports:
@@ -17,7 +17,7 @@ services:
       context: ./
       dockerfile: ./Dockerfile.AuthAPI
     volumes:
-      - ./auth/:/usr/src/app/
+      - ./src/packages/auth/:/usr/src/app/
     networks:
       - monorepo_network
     ports:
@@ -30,7 +30,7 @@ services:
       context: ./
       dockerfile: ./Dockerfile.Marvel
     volumes:
-      - ./marvel/:/usr/src/app/
+      - ./src/packages/marvel/:/usr/src/app/
     networks:
       - monorepo_network
     ports:
