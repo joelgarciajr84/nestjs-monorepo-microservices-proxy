@@ -11,11 +11,11 @@ on:
 jobs:
 
   build:
-
+    
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-    - run: cd 'marvel/'
-    - run: docker build . --file Dockerfile --tag monorepo-marvel:$(date +%s)
+    - run: docker build --file ./marvel/Dockerfile --tag monorepo_marvel:$(date +%s)
+
