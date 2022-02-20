@@ -25,7 +25,7 @@ export class AuthGuard implements CanActivate {
     private async validateToken(token: string): Promise<boolean> {
 
         try {
-            const endpoint = `http://auth_api:3000/auth/verify/${token}`
+            const endpoint = `${process.env.TOKEN_VERIFY_SVC}/${token}`
             const getTokenValidationRequest = this.httpService.get(endpoint)
 
             const result = await lastValueFrom(getTokenValidationRequest);
