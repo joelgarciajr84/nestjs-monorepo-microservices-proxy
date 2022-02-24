@@ -54,9 +54,9 @@ With the settings above when was necessary to interact with ```auth_api``` the r
 
 ## Where is the shared content?
 
-In my personal believes a microservice could not import a package from another, the best way to share common code between services is via packages, in this case, npm libraries published with scope and in a private repo, such as Azure Artifacts.
+IMHO a microservice could not import a package from another, the best way to share common code between services is via packages, in this case, npm libraries published with scope and in a private repo, such as Azure Artifacts.
 
-This approach makes the container much slim, easy to test and to deploy.
+This approach makes the container much lightweight, easy to test and to deploy.
 
 ## How to split the deploy?
 
@@ -88,7 +88,6 @@ What the code above does is, when whe push changes to the main branch at the pat
 
 ![alt text](https://i.postimg.cc/zBVKsznz/2022-02-23-21-03.png)
 ![alt text](https://i.postimg.cc/m2Nz6z03/2022-02-23-21-04.png)
-
 
 
 
