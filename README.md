@@ -60,7 +60,7 @@ Since NGINX is listening on port 8080, locally you can set Postman base url to `
 
 ## Where is the shared content?
 
-IMHO a microservice could not import a package from another, the best way to share common code between services is via packages, in this case, npm libraries published with scope and in a private repo, such as Azure Artifacts.
+IMHO a microservice could not import a package from another, the best way to share common code between services is via packages, in this case, npm libraries published with scope and in a private repo, such as [Azure Artifacts](https://docs.microsoft.com/pt-br/azure/devops/artifacts/get-started-npm?view=azure-devops&tabs=Windows).
 
 This approach makes the container much lightweight, easy to test and to deploy.
 
