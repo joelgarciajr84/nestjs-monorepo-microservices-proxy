@@ -1,7 +1,5 @@
-# Multiple independent NestJS projects at the same repo 
-
-The idea is to demonstrate an example of have multiple NextJS projects at the same repo and run them independently with fallback in a homologation URL
-
+# Multiple NestJS projects at the same repo and running independently with fallback in a homologation URL
+ 
 I know that are a lot of frameworks which promise to solve this with the "monorepo" concept, but I want to demonstrate how to achieve this without be locked-in in a framework or automation. It's is possible to reach it with a good decoupled code and Docker.
 
 ## Installation
