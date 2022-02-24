@@ -27,7 +27,7 @@ docker-compose up auth_api marvel_api
 
 ## What about the other packages(APIs)?
 
-The project contains a ```cockpit project ``` that works as a reverse proxy(NGINX) for your APIs, for instance, imagine you are working on a feature that only affects ```marvel_api``` and ```dc_api``` you don't have to run ```auth_api``` locally, so, how to run the tests and debug?. Simple, with NGINX fallback:
+The project contains a ```cockpit project ``` that works as a reverse proxy [NGINX](http://nginx.org/) for your APIs, for instance, imagine you are working on a feature that only affects ```marvel_api``` and ```dc_api``` you don't have to run ```auth_api``` locally, so, how to run the tests and debug?. Simple, with NGINX fallback:
 
 ```bash
 
