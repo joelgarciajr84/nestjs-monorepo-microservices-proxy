@@ -51,6 +51,9 @@ The project contains a ```cockpit project ``` that works as a reverse proxy(NGIN
 ```
 With the settings above when was necessary to interact with ```auth_api``` the reverse proxy will redirect for the service running on homolog server, so the only thing you need to do is to interact is with your work feature.
 
+![alt text](https://i.imgur.com/rAyOvRY.png)
+
+
 
 ## Where is the shared content?
 
