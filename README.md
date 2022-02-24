@@ -51,6 +51,11 @@ The project contains a ```cockpit project ``` that works as a reverse proxy(NGIN
 ```
 With the settings above when was necessary to interact with ```auth_api``` the reverse proxy will redirect for the service running on homolog server, so the only thing you need to do is to interact is with your work feature.
 
+Since NGINX is listening on port 8080, locally you can set Postman base url to ``` http://localhost:8080/{{your_svc_name}}```
+
+![alt text](https://i.imgur.com/CJHaj5Z.png)
+
+
 ![alt text](https://i.imgur.com/rAyOvRY.png)
 
 

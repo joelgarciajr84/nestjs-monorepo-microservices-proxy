@@ -37,6 +37,20 @@ services:
       - 3001:3001
       - 9230:9229
     command: npm run start:debug
+  dc_api:
+    container_name: dc_api
+    build:
+      context: ./
+      dockerfile: ./Dockerfile.DC
+    volumes:
+      - ./src/packages/dc:/usr/src/app/
+    networks:
+      - monorepo_network
+    ports:
+      - 3002:3002
+      - 9231:9229
+    command: npm run start:debug
+
 networks:
   monorepo_network:
     driver: bridge
