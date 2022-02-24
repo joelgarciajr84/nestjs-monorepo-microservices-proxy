@@ -86,6 +86,9 @@ jobs:
 ```
 What the code above does is, when whe push changes to the main branch at the path ``` src/packages/auth```(auth_api) the pipe will run, simple like that! :)
 
+![alt text](https://i.postimg.cc/zBVKsznz/2022-02-23-21-03.png)
+![alt text](https://i.postimg.cc/m2Nz6z03/2022-02-23-21-04.png)
+
 
 
 
