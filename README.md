@@ -98,6 +98,43 @@ What the code above does is, when whe push changes to the main branch at the pat
 ![alt text](https://i.postimg.cc/m2Nz6z03/2022-02-23-21-04.png)
 
 
+## What about the Debug process?
+You can use ```.vscode/launch.json``` to attach to the container:
 
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Debug MARVEL_API",
+      "remoteRoot": "/usr/src/app/",
+      "localRoot": "${workspaceFolder}/src/packages/marvel/",
+      "protocol": "inspector",
+      "port": 9230,
+      "restart": true,
+      "address": "localhost",
+      "sourceMaps": true,
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Debug AUTH_API",
+      "remoteRoot": "/usr/src/app/",
+      "localRoot": "${workspaceFolder}/scr/packages/auth/",
+      "protocol": "inspector",
+      "port": 9230,
+      "restart": true,
+      "address": "localhost",
+      "sourceMaps": true,
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
+```
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
